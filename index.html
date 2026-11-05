@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>AB Rahman | Personal Portfolio</title>
+<meta content="AB Rahman — Personal portfolio, life story, education, career, world travel and photo memories." name="description"/>
+<style>
+   :root{--bg:#07111f;--card:#0e1c2e;--text:#f6f8fb;--muted:#a9b5c5;--accent:#62a6ff;--line:#203149;--light:#f5f7fb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,17,31,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:21px;font-weight:900;letter-spacing:.4px}.brand span{color:var(--accent)}
+.menu{display:flex;gap:24px;font-size:14px;color:#dce5f1;font-weight:700}
+.menu a:hover{color:var(--accent)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;background:radial-gradient(circle at 75% 25%,rgba(98,166,255,.18),transparent 34%),linear-gradient(135deg,#07111f,#0b1727 55%,#08101c)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.kicker{color:var(--accent);font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(48px,7vw,82px);line-height:1.03;letter-spacing:-2px;margin-bottom:22px}
+h1 span{color:var(--accent)}
+.hero p{font-size:19px;color:var(--muted);max-width:680px}
+.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:12px;border:1px solid var(--line);font-weight:800}
+.btn.primary{background:var(--accent);color:#07111f;border-color:var(--accent)}
+.btn.ghost{background:rgba(255,255,255,.04)}
+.profile-card{position:relative;max-width:390px;margin:auto}
+.profile-card img{width:100%;height:500px;object-fit:cover;object-position:center top;border-radius:28px;border:7px solid rgba(255,255,255,.9);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.profile-label{position:absolute;left:22px;bottom:22px;background:rgba(7,17,31,.78);backdrop-filter:blur(12px);padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12)}
+section{padding:100px 0}
+.section-head{margin-bottom:38px}
+.eyebrow{color:var(--accent);font-size:13px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.15;margin-top:8px}
+.subtitle{color:var(--muted);margin-top:8px;max-width:760px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,#0e1c2e,#0a1625);border:1px solid var(--line);border-radius:20px;padding:25px}
+.card h3{margin-bottom:8px;font-size:20px}.card p{color:var(--muted)}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.info .item{padding:18px;border:1px solid var(--line);border-radius:16px;background:#0a1727}
+.item b{display:block;color:#dce7f4;margin-bottom:4px}.item span{color:var(--muted)}
+.timeline{border-left:2px solid #27476e;padding-left:28px}
+.event{margin-bottom:35px;position:relative}
+.event:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--accent);left:-35px;top:10px;box-shadow:0 0 0 5px #07111f}
+.event .date{color:var(--accent);font-size:13px;font-weight:900;letter-spacing:.8px}
+.event h3{font-size:23px;margin:4px 0}.event p{color:var(--muted)}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.story .card{min-height:100%}
+.quote{margin-top:30px;padding:28px;border-left:4px solid var(--accent);background:#0c1929;border-radius:0 18px 18px 0;font-size:23px;font-weight:700}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.photo{border-radius:20px;overflow:hidden;background:#0e1c2e;border:1px solid var(--line)}
+.photo img{width:100%;aspect-ratio:3/4;height:auto;display:block;object-fit:cover}
+.photo .caption{padding:15px 17px;color:#dfe8f3;font-weight:800}
+.photo.wide{grid-column:span 1}.photo.wide img{height:auto;aspect-ratio:3/4}
+
+.memory-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 24px}.memory-tab{border:1px solid #d9e0e8;background:#fff;color:#263445;border-radius:999px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer}.memory-tab:hover,.memory-tab.active{background:#101d2d;color:#fff;border-color:#101d2d}.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.memory-photo{position:relative;display:block;overflow:hidden;border-radius:18px;background:#fff;border:1px solid #e2e7ef;min-height:300px;text-decoration:none;box-shadow:0 12px 30px rgba(25,40,60,.08)}.memory-photo img{width:100%;height:330px;display:block;object-fit:cover;transition:transform .45s ease}.memory-photo:hover img{transform:scale(1.05)}.memory-photo span{display:block;padding:13px 15px;color:#172231;font-weight:900}.memory-note{margin-top:22px;padding:18px 20px;border-radius:16px;background:#f4f7fa;border:1px solid #e2e7ef;color:#536173}.memory-note strong{color:#172231}
+.light{background:var(--light);color:#101a27}
+.light .subtitle,.light .card p,.light .item span{color:#5e6a79}
+.light .card,.light .item{background:white;border-color:#e2e7ef}
+.light .card h3,.light .item b{color:#172231}
+.contact{background:linear-gradient(135deg,#10233b,#0a1625);border:1px solid var(--line);border-radius:28px;padding:45px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.contact-links a{padding:10px 15px;border:1px solid #2b4666;border-radius:10px;color:#dbe7f5}
+footer{padding:35px 0;border-top:1px solid rgba(255,255,255,.08);color:#8290a2;text-align:center;font-size:13px}
+@media(max-width:1000px){.memory-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){
+.menu{display:none}.hero-grid,.story,.contact-grid{grid-template-columns:1fr}.hero{padding-top:105px}
+.profile-card{max-width:320px}.profile-card img{height:410px}
+.grid3,.info,.gallery{grid-template-columns:1fr}.memory-grid{grid-template-columns:repeat(2,1fr)}.photo.wide{grid-column:auto}.photo img,.photo.wide img{height:430px}.memory-photo img{height:300px}
+section{padding:75px 0}h1{letter-spacing:-1px}
+}
+
+/* ===== PREMIUM PHOTO GALLERY ===== */
+.premium-memory{background:linear-gradient(180deg,#f7f9fc 0%,#eef2f7 100%);color:#101a27;overflow:hidden}
+.premium-head{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:42px}
+.gallery-stat{min-width:120px;text-align:center;padding:18px 20px;border:1px solid #dce3eb;border-radius:20px;background:rgba(255,255,255,.78);box-shadow:0 12px 35px rgba(25,40,60,.07)}
+.gallery-stat strong{display:block;font-size:34px;line-height:1;font-weight:950}.gallery-stat span{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#6b7787;font-weight:900}
+.premium-timeline-wrap{position:relative;margin:0 -4vw 48px;padding:0 4vw 10px;overflow-x:auto;scrollbar-width:thin}
+.premium-timeline{display:flex;gap:0;min-width:max-content;padding:8px 0 20px;position:relative}
+.premium-timeline:before{content:"";position:absolute;left:25px;right:25px;top:29px;height:2px;background:linear-gradient(90deg,#cfd8e3,#8ea9c6,#cfd8e3)}
+.premium-time{position:relative;width:185px;text-align:left;background:none;border:0;padding:0 15px 0 25px;color:#152233;cursor:pointer;font:inherit}
+.premium-time .time-dot{display:block;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #7ea5d2;position:relative;z-index:2;margin-bottom:15px;box-shadow:0 0 0 5px #eef2f7;transition:.25s}
+.premium-time:hover .time-dot,.premium-time.active .time-dot{background:#2d6fb7;border-color:#2d6fb7;transform:scale(1.15)}
+.time-year{display:block;font-size:13px;font-weight:950;color:#2d6fb7;letter-spacing:.5px}.time-title{display:block;font-size:16px;font-weight:900;margin-top:2px}.time-desc{display:block;color:#6a7584;font-size:12px;line-height:1.5;margin-top:5px;max-width:155px}
+.premium-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+.premium-filters{display:flex;gap:8px;flex-wrap:wrap}.premium-filter{border:1px solid #d7dfe8;background:rgba(255,255,255,.85);color:#324052;border-radius:999px;padding:9px 14px;font:inherit;font-size:13px;font-weight:850;cursor:pointer;transition:.2s}.premium-filter:hover,.premium-filter.active{background:#101d2d;color:#fff;border-color:#101d2d;transform:translateY(-1px)}
+.premium-hint{font-size:12px;color:#7b8796;font-weight:700}
+.premium-masonry{columns:4 250px;column-gap:16px}
+.premium-photo{position:relative;display:block;width:100%;padding:0;margin:0 0 16px;border:0;border-radius:18px;overflow:hidden;background:#dce4ed;cursor:zoom-in;break-inside:avoid;box-shadow:0 10px 28px rgba(24,39,57,.12);text-align:left}
+.premium-photo img{display:block;width:100%;height:auto;min-height:210px;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .35s ease}.premium-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(5,12,22,.82));opacity:.08;transition:.35s}.premium-photo:hover img{transform:scale(1.045);filter:saturate(1.08)}.premium-photo:hover:after{opacity:1}
+.photo-overlay{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:35px 16px 15px;color:#fff;transform:translateY(6px);opacity:0;transition:.35s;pointer-events:none}.premium-photo:hover .photo-overlay,.premium-photo:focus-visible .photo-overlay{opacity:1;transform:none}.photo-overlay b{display:block;font-size:14px}.photo-overlay small{display:block;margin-top:3px;font-size:10px;letter-spacing:.7px;text-transform:uppercase;opacity:.78}
+.premium-photo:focus-visible{outline:3px solid #62a6ff;outline-offset:3px}
+.premium-memory .memory-note{margin-top:25px;background:#fff;border-color:#dfe5ec}
+.photo-lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center}.photo-lightbox.open{display:flex}.lb-backdrop{position:absolute;inset:0;background:rgba(2,7,14,.94);backdrop-filter:blur(10px)}.lb-shell{position:relative;z-index:2;width:min(96vw,1500px);height:min(94vh,1000px);display:flex;align-items:center;justify-content:center}.lb-stage{position:relative;max-width:88%;max-height:92%;display:flex;align-items:center;justify-content:center}.lb-stage img{display:block;max-width:100%;max-height:82vh;width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 25px 90px rgba(0,0,0,.55)}.lb-caption{position:absolute;left:0;right:0;bottom:-42px;display:flex;justify-content:space-between;gap:20px;color:#fff;font-size:13px;font-weight:800;text-shadow:0 2px 8px #000}.lb-caption span:last-child{opacity:.65}.lb-close,.lb-nav{position:absolute;z-index:3;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.09);color:#fff;cursor:pointer;backdrop-filter:blur(10px);transition:.2s}.lb-close{top:12px;right:15px;width:46px;height:46px;border-radius:50%;font-size:30px;line-height:1}.lb-nav{top:50%;transform:translateY(-50%);width:58px;height:70px;border-radius:18px;font-size:50px;line-height:1}.lb-prev{left:10px}.lb-next{right:10px}.lb-close:hover,.lb-nav:hover{background:rgba(255,255,255,.18);transform:translateY(-50%) scale(1.04)}.lb-close:hover{transform:scale(1.04)}body.viewer-open{overflow:hidden}
+@media(max-width:1050px){.premium-masonry{columns:3 220px}}
+@media(max-width:820px){.premium-head{align-items:flex-start}.gallery-stat{min-width:95px}.premium-timeline-wrap{margin-left:-6vw;margin-right:-6vw;padding-left:6vw;padding-right:6vw}.premium-masonry{columns:2 170px;column-gap:10px}.premium-photo{margin-bottom:10px;border-radius:14px}.lb-stage{max-width:84%}.lb-nav{width:48px;height:60px}.lb-prev{left:2px}.lb-next{right:2px}.lb-caption{bottom:-38px;font-size:11px}}
+@media(max-width:520px){.premium-head{display:block}.gallery-stat{display:inline-block;margin-top:18px}.premium-masonry{columns:2 140px}.premium-filter{padding:8px 11px;font-size:12px}.premium-hint{display:none}.time-desc{display:none}.premium-time{width:130px}.lb-stage img{max-height:74vh}.lb-close{top:5px;right:5px}}
+
+.premium-empty{grid-column:1/-1;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px dashed var(--line);border-radius:20px;padding:32px;text-align:center;background:rgba(255,255,255,.025)}
+.premium-empty strong{font-size:1.05rem;color:#fff}
+.premium-empty span{color:#aab8c8;font-size:.92rem}
+
+.world-travel-grid{margin-top:8px}
+.travel-card{position:relative;overflow:hidden}
+.travel-country{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:900;letter-spacing:.2px;margin-bottom:14px}
+.travel-country:first-letter{font-size:24px}
+.travel-country span{font-size:14px;text-transform:uppercase;letter-spacing:1px}
+.travel-card h3{margin-bottom:8px}
+.travel-card p{margin:0}
+  </style>
+<style>
+.world-travel-stories{margin:34px auto 0;max-width:1100px}
+.world-travel-stories .stories-intro{text-align:center;margin:0 auto 22px;max-width:760px;color:var(--muted,#64748b);line-height:1.8}
+.world-travel-stories .travel-story{position:relative;margin:0 0 22px;padding:clamp(20px,3.5vw,36px);border:1px solid rgba(148,163,184,.25);border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.97),rgba(239,246,255,.88));box-shadow:0 12px 32px rgba(15,23,42,.07);overflow:hidden}
+.world-travel-stories .travel-story:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,#0ea5e9,#6366f1)}
+.world-travel-stories .story-kicker{font-size:.74rem;letter-spacing:.13em;font-weight:800;color:#64748b;margin:0 0 9px}
+.world-travel-stories .travel-story h3{font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.4;margin:0 0 18px;color:#0f172a}
+.world-travel-stories .travel-story p{font-size:1rem;line-height:1.95;color:#334155;margin:0 0 14px;text-align:justify}
+.world-travel-stories .travel-story p:last-child{margin-bottom:0}
+.world-travel-stories .future-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.world-travel-stories .future-option{min-height:145px;padding:24px;border:1px dashed rgba(100,116,139,.55);border-radius:20px;background:linear-gradient(145deg,rgba(239,246,255,.9),rgba(248,250,252,.95));display:flex;flex-direction:column;justify-content:center}
+.world-travel-stories .future-option .option-icon{font-size:1.8rem;margin-bottom:10px}
+.world-travel-stories .future-option h3{font-size:1.15rem;margin:0 0 8px;color:#0f172a}
+.world-travel-stories .future-option p{margin:0;color:#64748b;line-height:1.7;font-size:.94rem}
+@media(max-width:640px){.world-travel-stories .future-options{grid-template-columns:1fr}.world-travel-stories .travel-story p{text-align:left;line-height:1.85}.world-travel-stories .future-option{min-height:unset}}
+</style><style>
+.path-diary-section{max-width:1000px;margin:34px auto 0;padding:clamp(22px,4vw,42px);border-radius:26px;position:relative;overflow:hidden;background:linear-gradient(145deg,#f8fbff 0%,#edf6ff 52%,#f8faff 100%);border:1px solid rgba(100,116,139,.22);box-shadow:0 18px 48px rgba(15,23,42,.09);color:#263449}
+.path-diary-section:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0ea5e9,#6366f1,#14b8a6)}
+.path-diary-section .diary-eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.15em;color:#0f766e;margin:0 0 10px;text-transform:uppercase}
+.path-diary-section h3{font-size:clamp(1.5rem,4vw,2.15rem);line-height:1.35;margin:0 0 20px;color:#10233f}
+.path-diary-section p{font-size:1rem;line-height:1.95;margin:0 0 16px;color:#34445b}
+.path-diary-section .diary-list{margin:20px 0;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.78);border:1px solid rgba(148,163,184,.22)}
+.path-diary-section .diary-list-title{font-weight:800;color:#0f766e;margin:0 0 12px}
+.path-diary-section .diary-destination{display:flex;gap:11px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(148,163,184,.2);line-height:1.75}
+.path-diary-section .diary-destination:last-child{border-bottom:0;padding-bottom:0}
+.path-diary-section .diary-destination:first-of-type{padding-top:0}
+.path-diary-section .diary-flag{font-size:1.2rem;flex:0 0 auto}
+.path-diary-section .diary-signoff{margin-top:22px!important;padding-top:17px;border-top:1px solid rgba(148,163,184,.28);font-weight:700;color:#0f766e!important}
+@media(max-width:640px){.path-diary-section{border-radius:20px}.path-diary-section p{line-height:1.85}.path-diary-section .diary-list{padding:15px}}
+</style></head>
+<body>
+<nav>
+<div class="container nav">
+<a class="brand" href="#home">
+     AB
+     <span>
+      Rahman
+     </span>
+</a>
+<div class="menu">
+<a href="#about">
+      About
+     </a>
+<a href="#education">
+      Education
+     </a>
+<a href="#career">
+      Career
+     </a>
+<a href="#story">
+      Life Story
+     </a>
+<a href="#world-travel">
+      World travel
+     </a>
+<a href="#gallery">
+      Gallery
+     </a>
+<a href="#memories">
+      Memories
+     </a>
+<a href="#contact">
+      Contact
+     </a>
+</div>
+</div>
+</nav>
+<header class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="kicker">
+      Personal Portfolio
+     </div>
+<h1>
+      Hi, I am
+      <span>
+       AB Rahman
+      </span>
+</h1>
+<p>
+      From Bangladesh · Based in Saudi Arabia
+     </p>
+<p style="margin-top:12px">
+      A personal space for my story, education, professional journey, memories and the experiences that shaped me.
+     </p>
+<div class="actions">
+<a class="btn primary" href="#about">
+       Explore My Story
+      </a>
+<a class="btn ghost" href="#gallery">
+       View Gallery
+      </a>
+</div>
+</div>
+<div class="profile-card">
+<img alt="AB Rahman profile photo" src="assets/image-01.jpg"/>
+<div class="profile-label">
+      AB Rahman · Personal Website
+     </div>
+</div>
+</div>
+</header>
+<section id="about">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">
+      About Me
+     </div>
+<h2>
+      আমার পরিচয়
+     </h2>
+<p class="subtitle">
+      সুন্দর মন, পরিপাটি চিন্তা ও মানুষের প্রতি সম্মান—এই মূল্যবোধগুলোই আমার ব্যক্তিত্বকে পরিচিত করে।
+     </p>
+</div>
+<div class="info">
+<div class="item">
+<b>
+       পূর্ণ নাম
+      </b>
+<span>
+       আব্দুর রহমান / AB Rahman bin Amin
+      </span>
+</div>
+<div class="item">
+<b>
+       জন্ম
+      </b>
+<span>
+       ০৫ জুলাই ১৯৯৯ · ২১ আষাঢ় ১৪০৬
+      </span>
+</div>
+<div class="item">
+<b>
+       জন্ম ও বেড়ে ওঠা
+      </b>
+<span>
+       শরীয়তপুর, বাংলাদেশ
+      </span>
+</div>
+<div class="item">
+<b>
+       বিশেষ আগ্রহ
+      </b>
+<span>
+       ভ্রমণ ও নতুন অভিজ্ঞতা
+      </span>
+</div>
+<div class="item">
+<b>
+       বর্তমান কর্মস্থল
+      </b>
+<span>
+       Almarai · Saudi Arabia
+      </span>
+</div>
+<div class="item">
+<b>
+       পেশাগত যাত্রা
+      </b>
+<span>
+       ২০২২ থেকে সৌদি আরবে কর্মজীবন
+      </span>
+</div>
+</div>
+</div>
+</section>
+<section class="light" id="education">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">
+      Education
+     </div>
+<h2>
+      শিক্ষা জীবন
+     </h2>
+<p class="subtitle">
+      প্রাথমিক বিদ্যালয় থেকে উচ্চশিক্ষার পথচলা।
+     </p>
+</div>
+<div class="timeline">
+<div class="event">
+<div class="date">
+       PRIMARY
+      </div>
+<h3>
+       প্রাথমিক শিক্ষা
+      </h3>
+<p>
+       গ্রামের বিদ্যালয় থেকে প্রাথমিক শিক্ষা জীবনের শুরু।
+      </p>
+</div>
+<div class="event">
+<div class="date">
+       SECONDARY
+      </div>
+<h3>
+       শ্যামা চরন এস.সি. এডওয়ার্ড ইনস্টিটিউশন
+      </h3>
+<p>
+       মাধ্যমিক শিক্ষা সম্পন্ন করেন।
+      </p>
+</div>
+<div class="event">
+<div class="date">
+       HIGHER SECONDARY
+      </div>
+<h3>
+       শরীয়তপুর সরকারি কলেজ
+      </h3>
+<p>
+       উচ্চমাধ্যমিক শিক্ষা সম্পন্ন করেন।
+      </p>
+</div>
+<div class="event">
+<div class="date">
+       UNIVERSITY
+      </div>
+<h3>
+       জাতীয় বিশ্ববিদ্যালয় · BBA
+      </h3>
+<p>
+       BBA তৃতীয় বর্ষ পর্যন্ত অধ্যয়ন করেন।
+      </p>
+</div>
+</div>
+</div>
+</section>
+<section id="career">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">
+      Career
+     </div>
+<h2>
+      কর্মজীবনের যাত্রা
+     </h2>
+<p class="subtitle">
+      দেশের অভ্যন্তরীণ কাজের অভিজ্ঞতা থেকে সৌদি আরবে পেশাগত জীবনের নতুন অধ্যায়।
+     </p>
+</div>
+<div class="grid3">
+<div class="card">
+<h3>
+       🇧🇩 Bangladesh
+      </h3>
+<p>
+       দেশের অভ্যন্তরে বিভিন্ন কাজের সঙ্গে যুক্ত থাকার মাধ্যমে কর্মজীবনের ভিত্তি তৈরি।
+      </p>
+</div>
+<div class="card">
+<h3>
+       🇸🇦 Saudi Arabia
+      </h3>
+<p>
+       ২০২২ সাল থেকে সৌদি আরবের সুপরিচিত কোম্পানি Almarai-এ কর্মরত।
+      </p>
+</div>
+<div class="card">
+<h3>
+       🎯 Future Vision
+      </h3>
+<p>
+       অভিজ্ঞতা, দক্ষতা ও ধারাবাহিক শেখার মাধ্যমে আরও শক্তিশালী আন্তর্জাতিক ক্যারিয়ার গড়ে তোলার লক্ষ্য।
+      </p>
+</div>
+</div>
+</div>
+</section>
+<section class="light" id="story">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">
+      Life Story
+     </div>
+<h2>
+      আমার গল্প
+     </h2>
+<p class="subtitle">
+      শৈশবের সরলতা, কৈশোরের বন্ধুত্ব এবং জীবনের চ্যালেঞ্জ—সব মিলেই আজকের আমি।
+     </p>
+</div>
+<div class="story">
+<div class="card">
+<h3>
+       স্মৃতিময় শৈশব
+      </h3>
+<p>
+       বাংলাদেশের দক্ষিণাঞ্চল, পদ্মা নদীর পাড়ঘেঁষা শরীয়তপুরের ছোট্ট একটি গ্রামে জন্ম ও বেড়ে ওঠা। গ্রামের পরিবেশ, সহজ-সরল মানুষ, বন্ধুদের সঙ্গে খেলাধুলা এবং পরিবারের ভালোবাসায় কেটেছে শৈশব। লাটিম, মার্বেল, ঘুড়ি, কানামাছি, গোল্লাছুট, ডাংগুলি, এক্কা-দোক্কা ও নানা গ্রামীণ খেলাই ছিল আনন্দের বড় অংশ।
+      </p>
+</div>
+<div class="card">
+<h3>
+       দুরন্ত কৈশোর
+      </h3>
+<p>
+       কৈশোরের গোল্ডেন সময় কেটেছে বন্ধুদের সঙ্গে। পড়াশোনায় খুব ভালো না হলেও স্কুলজীবনের শিক্ষক-শিক্ষিকাদের শাসন, ভালোবাসা ও পরিচর্যা দায়িত্বশীল হয়ে উঠতে সাহায্য করেছে। বন্ধুত্ব, দুষ্টুমি ও অসংখ্য স্মৃতি সেই সময়কে বিশেষ করে রেখেছে।
+      </p>
+</div>
+</div>
+<div class="quote">
+     “বিশ্ব জগৎ দেখব আমি আপন হাতের মুঠোয় পুরে।”
+    </div>
+</div>
+</section>
+<section class="light world-travel" id="world-travel">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">
+      World travel
+     </div>
+<h2>
+      আমার দেখা পৃথিবী
+     </h2>
+<p class="subtitle">
+      ভ্রমণের পথে দেখা দেশ, মানুষ, সংস্কৃতি ও অভিজ্ঞতাগুলোকে নিজের স্মৃতির মতো করে এখানে শেয়ার করবো।
+     </p>
+</div>
+<div class="grid3 world-travel-grid">
+<div class="card travel-card">
+<div class="travel-country">
+       🇧🇩
+       <span>
+        Bangladesh
+       </span>
+</div>
+<h3>
+       আমার শিকড়
+      </h3>
+<p>বাংলাদেশ, নিজের শিকড় ও স্মৃতির বিস্তারিত বিবরণ নিচে তুলে ধরা হয়েছে।</p>
+</div>
+<div class="card travel-card">
+<div class="travel-country">
+       🇶🇦
+       <span>
+        Qatar
+       </span>
+</div>
+<h3>
+       Qatar
+      </h3>
+<p>কাতার ভ্রমণের অভিজ্ঞতা ও স্মৃতির বিস্তারিত বিবরণ নিচে তুলে ধরা হয়েছে।</p>
+</div>
+<div class="card travel-card">
+<div class="travel-country">
+       🇸🇦
+       <span>
+        Saudi Arabia
+       </span>
+</div>
+<h3>
+       Saudi Arabia
+      </h3>
+<p>সৌদি আরবের জীবন, সংস্কৃতি ও অভিজ্ঞতার বিস্তারিত বিবরণ নিচে তুলে ধরা হয়েছে।</p>
+</div>
+<div class="card travel-card">
+<div class="travel-country">
+       🇴🇲
+       <span>
+        Oman
+       </span>
+</div>
+<h3>
+       Oman
+      </h3>
+<p>ওমান ভ্রমণের অভিজ্ঞতা ও স্মৃতির বিস্তারিত বিবরণ নিচে তুলে ধরা হয়েছে।</p>
+</div>
+<div class="card travel-card">
+<div class="travel-country">
+       🇦🇪
+       <span>
+        Dubai
+       </span>
+</div>
+<h3>
+       Dubai
+      </h3>
+<p>দুবাই ভ্রমণের অভিজ্ঞতা ও বিশেষ মুহূর্তের বিস্তারিত বিবরণ নিচে তুলে ধরা হয়েছে।</p>
+</div>
+<div class="card travel-card">
+<div class="travel-country">
+       🌍
+       <span>
+        More Countries
+       </span>
+</div>
+<h3>
+       More Countries
+      </h3>
+<p>ভবিষ্যতে যুক্ত হওয়া অন্যান্য দেশের ভ্রমণ-অভিজ্ঞতার বিস্তারিত বিবরণও নিচে থাকবে।</p>
+</div>
+</div>
+<div class="world-travel-added-image" style="margin-top:32px; width:100%; overflow:hidden; border-radius:20px; box-shadow:0 12px 35px rgba(0,0,0,.14); background:#0b1220;"><img alt="World Travel Journey — Bangladesh, Qatar, Saudi Arabia, Oman, Dubai and more countries" loading="lazy" src="assets/image-02.jpg" style="display:block; width:100%; height:auto; max-width:100%; object-fit:contain; margin:0 auto;"/></div><div class="world-travel-stories"><p class="stories-intro">প্রতিটি যাত্রা রেখে যায় আলাদা অনুভূতি—কোথাও নিজের শিকড়ের টান, কোথাও নতুন দেশ ও সংস্কৃতির স্মৃতি।</p><article class="travel-story"><div class="story-kicker">BANGLADESH · MY ROOTS</div><h3>আমার শিকড় 🇧🇩</h3><p>মানুষের জীবনে শিকড় মানে শুধু জন্মস্থান নয়; শিকড় মানে তার পরিচয়, স্মৃতি, ভালোবাসা আর বেড়ে ওঠার গল্প। যে মাটিতে প্রথম পা রেখেছি, যে পরিবেশে শৈশব কাটিয়েছি, যে মানুষগুলোর ভালোবাসায় আজকের আমি হয়ে উঠেছি—সেই সবকিছুর নামই আমার শিকড়।</p><p>জীবনের প্রয়োজনে মানুষকে ঘর ছাড়তে হয়, আপনজনদের থেকে দূরে থাকতে হয়, নিজের স্বপ্ন পূরণের জন্য অচেনা পরিবেশে সংগ্রাম করতে হয়। আমিও সেই পথের একজন পথিক। প্রবাসের ব্যস্ততা আর ভবিষ্যৎ গড়ার চেষ্টার মাঝেও মন বারবার ফিরে যেতে চায় নিজের মাটিতে, নিজের মানুষের কাছে—যেখানে কোনো কৃত্রিমতা নেই, আছে শুধু আপন হওয়ার শান্তি।</p><p>সময় বদলায়, মানুষ বদলায়, বদলে যায় চারপাশের পৃথিবী। কিন্তু শৈশবের স্মৃতি, আপনজনের ভালোবাসা আর জন্মভূমির মায়া কখনো পুরোনো হয় না। দূরত্ব আমাকে শিখিয়েছে, ঘর শুধু একটি জায়গা নয়; ঘর হলো সেই অনুভূতি, যেখানে মন শান্তি খুঁজে পায়।</p><p>আমি জীবনে অনেক দূর এগিয়ে যেতে চাই, নিজের স্বপ্ন পূরণ করতে চাই, পরিবারের মুখে হাসি ফোটাতে চাই। তবে সাফল্যের পথে হাঁটতে গিয়ে নিজের শিকড়কে কখনো ভুলে যেতে চাই না। কারণ গাছ যত উঁচুতেই উঠুক, তার শক্তি থাকে মাটির গভীরে থাকা শিকড়ে। মানুষের জীবনও তেমন—নিজের শিকড় যত গভীর, প্রতিকূলতায় দাঁড়িয়ে থাকার শক্তিও তত বেশি।</p><p>আমি হয়তো শিকড় থেকে দূরে থাকতে পারি, কিন্তু শিকড় কখনো আমার ভেতর থেকে দূরে যায় না। আমার শিকড়ই আমার পরিচয়, আমার শক্তি, আমার ভালোবাসা—আমার অস্তিত্বের প্রথম ও চিরস্থায়ী ঠিকানা। ❤️</p></article><article class="travel-story"><div class="story-kicker">QATAR · A TRANSIT MEMORY</div><h3>আমার দেখা Qatar 🇶🇦</h3><p>ভ্রমণ মানে শুধু এক দেশ থেকে অন্য দেশে যাওয়া নয়, ভ্রমণ মানে নতুন কিছু দেখা, নতুন সংস্কৃতির সঙ্গে পরিচিত হওয়া এবং কিছু সুন্দর স্মৃতি হৃদয়ে ধারণ করা।</p><p>আমার ভ্রমণজীবনের তেমনই একটি সুন্দর অভিজ্ঞতা কাতার। যাত্রাপথে আমার বিমান কাতারের হামাদ আন্তর্জাতিক বিমানবন্দরে ট্রানজিট করে। সেখানে প্রায় আট ঘণ্টা সময় কাটানোর সুযোগ হয়েছিল। সময়টা ছিল সাময়িক, কিন্তু অভিজ্ঞতাগুলো ছিল মুগ্ধ হওয়ার মতো।</p><p>বিমানবন্দরের নান্দনিক স্থাপত্য, আধুনিক পরিবেশ, পরিচ্ছন্নতা আর সুশৃঙ্খল ব্যবস্থাপনা আমাকে সত্যিই মুগ্ধ করেছে। চারপাশে দেখেছি বিভিন্ন দেশের মানুষের চলাচল, ভিন্ন ভিন্ন সংস্কৃতির উপস্থিতি এবং আন্তর্জাতিক ভ্রমণের এক অসাধারণ ব্যস্ততা। মানুষের আচরণ, আন্তরিকতা ও পরিবেশের সৌন্দর্য আমার মনে এক ইতিবাচক অনুভূতি তৈরি করেছে।</p><p>আট ঘণ্টার সেই বিরতি আমাকে উপলব্ধি করিয়েছে, একটি দেশের সৌন্দর্য শুধু তার প্রাকৃতিক দৃশ্যেই নয়; তার স্থাপত্য, সংস্কৃতি, আতিথেয়তা ও মানুষের আচরণেও ফুটে ওঠে। কাতারকে খুব অল্প সময়ের জন্য দেখেছি, তবুও সেই সময়টুকু আমার ভ্রমণের স্মৃতিতে বিশেষ জায়গা করে নিয়েছে।</p><p>কিছু জায়গায় দীর্ঘদিন থেকেও স্মৃতি তৈরি হয় না, আবার কিছু জায়গায় কয়েক ঘণ্টা কাটিয়েও মনের মধ্যে থেকে যায় মুগ্ধতার রেশ। আমার দেখা Qatar তেমনই এক সুন্দর অভিজ্ঞতা—যা হয়তো একদিন আমাকে আবারও সেখানে ফিরে যাওয়ার স্বপ্ন দেখাবে। ✈️🇶🇦</p></article><article class="travel-story"><div class="story-kicker">OMAN · A BRIEF STOP</div><h3>আমার দেখা Oman 🇴🇲</h3><p>ভ্রমণের পথে কিছু জায়গা থাকে, যেখানে অল্প সময়ের জন্য থামলেও সেই জায়গার সৌন্দর্য ও পরিবেশ মনে গভীর ছাপ রেখে যায়। ওমান আমার ভ্রমণজীবনের তেমনই একটি নাম।</p><p>বিমানবন্দরে ট্রানজিটের সময় ওমানের আধুনিক স্থাপত্য, পরিচ্ছন্ন পরিবেশ এবং সুশৃঙ্খল ব্যবস্থাপনা কাছ থেকে দেখার সুযোগ হয়েছে। চারপাশের পরিবেশে এক ধরনের শান্ত ও মার্জিত সৌন্দর্য অনুভব করেছি। বিভিন্ন দেশের মানুষের উপস্থিতি, তাদের চলাফেরা এবং স্থানীয় সংস্কৃতির পরিচয় আমাকে নতুন কিছু জানার আগ্রহ জাগিয়েছে।</p><p>আমার কাছে ভ্রমণ মানে শুধু গন্তব্যে পৌঁছানো নয়; পথের প্রতিটি অভিজ্ঞতা থেকেও কিছু শেখা। ওমানে কাটানো সেই স্বল্প সময় আমাকে মনে করিয়ে দিয়েছে, প্রতিটি দেশেরই রয়েছে নিজস্ব সৌন্দর্য, ঐতিহ্য ও স্বতন্ত্র পরিচয়।</p><p>ওমানে আমার সময়টা হয়তো ছিল অল্প, কিন্তু সেই যাত্রাবিরতি আমার ভ্রমণের স্মৃতিতে রেখে গেছে এক সুন্দর অনুভূতি—যা দূরদেশের পথে ক্ষণিকের দেখা হয়েও মনে জায়গা করে নেয়। ✈️🇴🇲</p></article><article class="travel-story"><div class="story-kicker">DUBAI · A CITY OF DREAMS</div><h3>আমার দেখা Dubai 🇦🇪</h3><p>দুবাই—আধুনিকতা, নান্দনিকতা ও স্বপ্নপূরণের এক অনন্য নাম। ভ্রমণের পথে দুবাইয়ের বিমানবন্দরে ট্রানজিট করার অভিজ্ঞতা আমার স্মৃতিতে বিশেষ একটি জায়গা দখল করে আছে।</p><p>বিমানবন্দরের বিশাল পরিসর, আধুনিক স্থাপত্য, আলোকসজ্জা, পরিচ্ছন্নতা এবং সুশৃঙ্খল পরিবেশ আমাকে মুগ্ধ করেছে। পৃথিবীর বিভিন্ন প্রান্ত থেকে আসা মানুষের ব্যস্ত পদচারণা দেখে মনে হয়েছে, যেন একই জায়গায় অসংখ্য দেশের সংস্কৃতি ও মানুষের মিলন ঘটেছে। আন্তর্জাতিক বিমান চলাচলের ব্যস্ততা আর আধুনিক ব্যবস্থাপনা দুবাইয়ের বিশ্বমুখী পরিচয়কে আরও স্পষ্ট করে তুলেছে।</p><p>অল্প সময়ের এই যাত্রাবিরতিতে দুবাইকে পুরোপুরি জানার সুযোগ হয়নি, তবে বিমানবন্দরের সৌন্দর্য ও পরিবেশ আমার মনে গভীর ছাপ ফেলেছে। কিছু জায়গা আছে, যেগুলোকে কাছ থেকে দেখার পর আরও বেশি করে জানার ও ঘুরে দেখার ইচ্ছা জাগে। দুবাই আমার কাছে তেমনই একটি জায়গা।</p><p>কখনো কখনো গন্তব্যে পৌঁছানোর আগের বিরতিটুকুও ভ্রমণের সুন্দর স্মৃতি হয়ে ওঠে। আমার দেখা Dubai তেমনই এক মুগ্ধতা—যা ভবিষ্যতে এই শহরকে আরও কাছ থেকে দেখার ইচ্ছা জাগিয়ে রাখে। ✈️🇦🇪</p></article><div class="future-options"><div class="future-option"><div class="option-icon">🇸🇦</div><h3>কালচার অফ Saudi Arabia 🇸🇦</h3><p>সৌদি আরবের সংস্কৃতি, ঐতিহ্য, জীবনযাপন ও নিজের দেখা অভিজ্ঞতা এখানে যুক্ত হবে।</p></div><div class="future-option"><div class="option-icon">🌍</div><h3>More countries 🌍</h3><p>ভবিষ্যতে আরও দেশ, নতুন ভ্রমণকাহিনি ও স্মৃতি যোগ করার জন্য সংরক্ষিত।</p></div></div></div><section aria-label="পথের ডায়েরি" class="path-diary-section"><div class="diary-eyebrow">TRAVEL NOTES · MY WORLD</div><h3>✈️ পথের ডায়েরি</h3><p>পৃথিবীকে নতুন করে দেখার স্বপ্ন নিয়েই মানুষের যাত্রা শুরু হয়। কেউ পৌঁছে যায় কাঙ্ক্ষিত গন্তব্যে, আবার কেউ পথের বিরতিতেই আবিষ্কার করে নতুন সৌন্দর্য, ভিন্ন সংস্কৃতি আর মনে রাখার মতো অভিজ্ঞতা।</p><p>আমার ভ্রমণজীবনেও এমন কিছু মুহূর্ত এসেছে, যখন এক দেশ থেকে অন্য দেশে যাওয়ার পথে আন্তর্জাতিক বিমানবন্দরে কিছু সময় কাটানোর সুযোগ হয়েছে। কখনো কয়েক ঘণ্টার সংক্ষিপ্ত বিরতি, কখনো দীর্ঘ যাত্রাবিরতি—আর সেই সময়টুকুতেই চোখে পড়েছে নানা দেশের পরিবেশ, মানুষের চলাফেরা, স্থাপত্যের নান্দনিকতা এবং আন্তর্জাতিক ভ্রমণের প্রাণচাঞ্চল্য।</p><p>প্রতিটি দেশকে গভীরভাবে জানার সুযোগ হয়তো হয়নি; তবু যতটুকু দেখেছি, তা আমার স্মৃতিতে আলাদা জায়গা করে নিয়েছে। কোনো দৃশ্য মুগ্ধ করেছে, কোনো অভিজ্ঞতা মনে কৌতূহল জাগিয়েছে, আবার কোনো মুহূর্ত ভবিষ্যতে আরও দূরদেশ দেখার স্বপ্নকে করেছে উজ্জ্বল।</p><p>এই ধারাবাহিকে তুলে ধরব আমার দেখা সেই দেশগুলোর গল্প—যেখানে হয়তো অল্প সময়ের অতিথি ছিলাম, কিন্তু সেখানকার পরিবেশ, সৌন্দর্য ও অভিজ্ঞতা মনে রেখে গেছে দীর্ঘস্থায়ী ছাপ।</p><div class="diary-list"><p class="diary-list-title">🌍 আমার ভ্রমণ-স্মৃতির পাতায়</p><div class="diary-destination"><span class="diary-flag">🇶🇦</span><div><strong>আমার দেখা Qatar</strong> — আধুনিকতা, নান্দনিকতা ও মুগ্ধতার স্মৃতি।</div></div><div class="diary-destination"><span class="diary-flag">🇴🇲</span><div><strong>আমার দেখা Oman</strong> — শান্ত পরিবেশ, স্বতন্ত্র সৌন্দর্য ও নতুন অভিজ্ঞতা।</div></div><div class="diary-destination"><span class="diary-flag">🇦🇪</span><div><strong>আমার দেখা Dubai</strong> — আধুনিক স্থাপত্য, ব্যস্ত আন্তর্জাতিক পরিবেশ ও বিশেষ মুহূর্তের গল্প।</div></div></div><p>ভ্রমণ মানে শুধু গন্তব্যে পৌঁছানো নয়; পথের প্রতিটি বিরতিও হয়ে উঠতে পারে জীবনের একেকটি সুন্দর গল্প। সময়ের সঙ্গে সেই গল্পগুলোই জমা হয় স্মৃতির পাতায়—আর একদিন হয়ে ওঠে জীবনের সবচেয়ে মূল্যবান অভিজ্ঞতার অংশ।</p><p class="diary-signoff">— পথের ডায়েরি | আমার দেখা পৃথিবী 🌍❤️</p></section></div>
+</section>
+<section id="gallery">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">
+      Gallery
+     </div>
+<h2>
+      আমার কিছু মুহূর্ত
+     </h2>
+<p class="subtitle">
+      আমার জীবনের বিভিন্ন মুহূর্ত, ভ্রমণ, প্রকৃতি, বন্ধুত্ব ও ব্যক্তিগত স্মৃতির ছবিগুলো একসাথে সাজানো হয়েছে।
+     </p>
+<div class="gallery-stat">
+<strong>
+       13
+      </strong>
+<span>
+       Photos
+      </span>
+</div>
+</div>
+<div class="gallery">
+<div class="photo wide">
+<img alt="AB Rahman outdoor portrait" src="assets/image-03.jpg"/>
+<div class="caption">
+       Outdoor · Travel &amp; Lifestyle
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman casual portrait" src="assets/image-04.jpg"/>
+<div class="caption">
+       Casual Portrait
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman lifestyle portrait" src="assets/image-05.jpg"/>
+<div class="caption">
+       Lifestyle · City Moments
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 1" loading="lazy" src="assets/image-06.jpg"/>
+<div class="caption">
+       Moment 01 · City &amp; Travel
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 2" loading="lazy" src="assets/image-07.jpg"/>
+<div class="caption">
+       Moment 02 · City Life
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 3" loading="lazy" src="assets/image-08.jpg"/>
+<div class="caption">
+       Moment 03 · Nature
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 4" loading="lazy" src="assets/image-09.jpg"/>
+<div class="caption">
+       Moment 04 · Cultural Moment
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 5" loading="lazy" src="assets/image-10.jpg"/>
+<div class="caption">
+       Moment 05 · Lifestyle
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 6" loading="lazy" src="assets/image-11.jpg"/>
+<div class="caption">
+       Moment 06 · Outdoor
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 7" loading="lazy" src="assets/image-12.jpg"/>
+<div class="caption">
+       Moment 07 · Travel
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 8" loading="lazy" src="assets/image-13.jpg"/>
+<div class="caption">
+       Moment 08 · Friendship
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 9" loading="lazy" src="assets/image-14.jpg"/>
+<div class="caption">
+       Moment 09 · Lifestyle
+      </div>
+</div>
+<div class="photo">
+<img alt="AB Rahman personal moment 10" loading="lazy" src="assets/image-15.jpg"/>
+<div class="caption">
+       Moment 10 · Personal Moment
+      </div>
+</div>
+</div>
+</div>
+</section>
+<section class="light memories premium-memory" id="memories">
+<div class="container">
+<div class="premium-head">
+<div>
+<div class="eyebrow">
+       Premium Memory Archive
+      </div>
+<h2>
+       স্মৃতির পথে, ছবির ফ্রেমে
+      </h2>
+<p class="subtitle">
+       AB Rahman-এর জীবনের গুরুত্বপূর্ণ সময়গুলোকে একটি elegant timeline ও cinematic masonry gallery-তে সাজানো হয়েছে। বর্তমানে 19টি স্মরণীয় ছবি এখানে সংরক্ষিত আছে।
+      </p>
+</div>
+<div class="gallery-stat">
+<strong>
+       19
+      </strong>
+<span>
+       Photos
+      </span>
+</div>
+</div>
+<div class="premium-timeline-wrap">
+<div aria-label="Memory timeline" class="premium-timeline">
+<button class="premium-time" data-jump="birth">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        1999
+       </span>
+<span class="time-title">
+        জন্ম
+       </span>
+<span class="time-desc">
+        শরীয়তপুরে জন্ম।
+       </span>
+</button>
+<button class="premium-time" data-jump="childhood">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        2010
+       </span>
+<span class="time-title">
+        শৈশব
+       </span>
+<span class="time-desc">
+        শরীয়তপুরে গ্রামীণ পরিবেশে বেড়ে ওঠা।
+       </span>
+</button>
+<button class="premium-time" data-jump="adolescence">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        2016
+       </span>
+<span class="time-title">
+        দুরন্ত কৈশোর
+       </span>
+<span class="time-desc">
+        স্কুলজীবন, বন্ধুত্ব, দুষ্টুমি ও স্মৃতিময় সময়।
+       </span>
+</button>
+<button class="premium-time" data-jump="tour2018">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        2018
+       </span>
+<span class="time-title">
+        University Tour
+       </span>
+<span class="time-desc">
+        বিশ্ববিদ্যালয় জীবনের ভ্রমণ ও বন্ধুত্বের স্মৃতি।
+       </span>
+</button>
+<button class="premium-time" data-jump="tour2019">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        2019
+       </span>
+<span class="time-title">
+        University Tour
+       </span>
+<span class="time-desc">
+        বিশ্ববিদ্যালয় জীবনের আরও কিছু বিশেষ মুহূর্ত।
+       </span>
+</button>
+<button class="premium-time" data-jump="2022">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        2022
+       </span>
+<span class="time-title">
+        Saudi Journey
+       </span>
+<span class="time-desc">
+        সৌদি আরবে কর্মজীবনের নতুন অধ্যায় ও স্মৃতিগুলো।
+       </span>
+</button>
+<button class="premium-time" data-jump="2025">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        2025
+       </span>
+<span class="time-title">
+        ALBUM AT 2025
+       </span>
+<span class="time-desc">
+        সাম্প্রতিক জীবন, ভ্রমণ ও ব্যক্তিগত মুহূর্ত।
+       </span>
+</button>
+<button class="premium-time" data-jump="umrah">
+<span class="time-dot">
+</span>
+<span class="time-year">
+        2025
+       </span>
+<span class="time-title">
+        Sofor Umrah
+       </span>
+<span class="time-desc">
+        উমরাহ সফরের স্মরণীয় কিছু ছবি।
+       </span>
+</button>
+</div>
+</div>
+<div class="premium-toolbar">
+<div aria-label="Photo filters" class="premium-filters" role="tablist">
+<button class="premium-filter active" data-filter="all">
+       সব ছবি
+      </button>
+<button class="premium-filter" data-filter="profile">
+       প্রোফাইল
+      </button>
+<button class="premium-filter" data-filter="personal">
+       ব্যক্তিগত
+      </button>
+<button class="premium-filter" data-filter="birth">
+       জন্ম
+      </button>
+<button class="premium-filter" data-filter="childhood">
+       শৈশব
+      </button>
+<button class="premium-filter" data-filter="adolescence">
+       কৈশোর
+      </button>
+<button class="premium-filter" data-filter="2025">
+       2025
+      </button>
+<button class="premium-filter" data-filter="umrah">
+       উমরাহ
+      </button>
+<button class="premium-filter" data-filter="2022">
+       2022
+      </button>
+<button class="premium-filter" data-filter="tour2019">
+       Tour 2019
+      </button>
+<button class="premium-filter" data-filter="tour2018">
+       Tour 2018
+      </button>
+</div>
+<div class="premium-hint">
+      Click any photo · Use ← → to navigate · ESC to close
+     </div>
+</div>
+<div class="premium-masonry" id="premiumMasonry">
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — কাবার সামনে" data-category="umrah" data-full="assets/image-16.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — কাবার সামনে" loading="lazy" src="assets/image-16.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — কাবার সামনে
+       </strong>
+<span>
+        উমরাহ সফরের একটি ব্যক্তিগত স্মৃতি।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — কাবা শরীফ" data-category="umrah" data-full="assets/image-17.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — কাবা শরীফ" loading="lazy" src="assets/image-17.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — কাবা শরীফ
+       </strong>
+<span>
+        মসজিদুল হারামে কাবা শরীফের অপূর্ব দৃশ্য।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — মক্কা" data-category="umrah" data-full="assets/image-18.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — মক্কা" loading="lazy" src="assets/image-18.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — মক্কা
+       </strong>
+<span>
+        কাবা শরীফ ও মক্কার আকাশের এক সুন্দর মুহূর্ত।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — হারাম শরীফ" data-category="umrah" data-full="assets/image-19.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — হারাম শরীফ" loading="lazy" src="assets/image-19.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — হারাম শরীফ
+       </strong>
+<span>
+        মসজিদুল হারামের প্রাঙ্গণে স্মরণীয় একটি দৃশ্য।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — মক্কার পথ" data-category="umrah" data-full="assets/image-20.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — মক্কার পথ" loading="lazy" src="assets/image-20.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — মক্কার পথ
+       </strong>
+<span>
+        মক্কার পথে দেখা একটি স্মরণীয় শহুরে দৃশ্য।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — কাবার কাছাকাছি" data-category="umrah" data-full="assets/image-21.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — কাবার কাছাকাছি" loading="lazy" src="assets/image-21.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — কাবার কাছাকাছি
+       </strong>
+<span>
+        কাবা শরীফের কাছ থেকে ধারণ করা একটি মুহূর্ত।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — মদিনা" data-category="umrah" data-full="assets/image-22.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — মদিনা" loading="lazy" src="assets/image-22.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — মদিনা
+       </strong>
+<span>
+        মসজিদে নববীর প্রাঙ্গণে একটি স্মরণীয় মুহূর্ত।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — মক্কা" data-category="umrah" data-full="assets/image-23.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — মক্কা" loading="lazy" src="assets/image-23.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — মক্কা
+       </strong>
+<span>
+        কাবা শরীফকে ঘিরে তাওয়াফের সময়ের দৃশ্য।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — মদিনা" data-category="umrah" data-full="assets/image-24.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — মদিনা" loading="lazy" src="assets/image-24.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — মদিনা
+       </strong>
+<span>
+        মসজিদে নববীর সামনে ব্যক্তিগত একটি স্মৃতি।
+       </span>
+</div>
+</article>
+<article class="premium-photo" data-caption="উমরাহ স্মৃতি — রাতের স্মৃতি" data-category="umrah" data-full="assets/image-25.jpg" style="display:block">
+<img alt="উমরাহ স্মৃতি — রাতের স্মৃতি" loading="lazy" src="assets/image-25.jpg"/>
+<div class="premium-photo-overlay">
+<strong>
+        উমরাহ স্মৃতি — রাতের স্মৃতি
+       </strong>
+<span>
+        উমরাহ সফরে রাতের একটি ব্যক্তিগত মুহূর্ত।
+       </span>
+</div>
+</article>
+<div aria-live="polite" class="premium-empty" id="galleryEmpty" role="status">
+<strong>
+       এই ফোল্ডারে কোনো ছবি নেই
+      </strong>
+<span>
+       অন্য ফোল্ডার থেকে ছবি দেখতে উপরের ফিল্টার নির্বাচন করুন।
+      </span>
+</div>
+<button class="premium-photo" data-caption="শৈশবের স্মৃতি · শৈশব" data-category="childhood" data-full="assets/image-26.jpg" type="button">
+<img alt="শৈশবের স্মৃতি" loading="lazy" src="assets/image-26.jpg"/>
+<span class="photo-overlay">
+<b>
+        শৈশবের স্মৃতি
+       </b>
+<small>
+        শৈশব
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-27.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-27.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-28.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-28.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-29.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-29.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-30.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-30.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-31.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-31.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-32.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-32.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-33.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-33.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+<button class="premium-photo" data-caption="উমরাহ সফর · উমরাহ" data-category="umrah" data-full="assets/image-34.jpg" type="button">
+<img alt="উমরাহ সফর" loading="lazy" src="assets/image-34.jpg"/>
+<span class="photo-overlay">
+<b>
+        উমরাহ সফর
+       </b>
+<small>
+        উমরাহ
+       </small>
+</span>
+</button>
+</div>
+<div class="memory-note">
+</div>
+<div aria-hidden="true" class="photo-lightbox" id="photoLightbox">
+<div class="lb-backdrop" data-close="1">
+</div>
+<div aria-label="Fullscreen photo viewer" aria-modal="true" class="lb-shell" role="dialog">
+<button aria-label="Close fullscreen viewer" class="lb-close" id="lbClose">
+       ×
+      </button>
+<button aria-label="Previous photo" class="lb-nav lb-prev" id="lbPrev">
+       ‹
+      </button>
+<div class="lb-stage">
+<img alt="" id="lbImage"/>
+<div class="lb-caption">
+<span id="lbTitle">
+</span>
+<span id="lbCounter">
+</span>
+</div>
+</div>
+<button aria-label="Next photo" class="lb-nav lb-next" id="lbNext">
+       ›
+      </button>
+</div>
+</div>
+</div>
+</section>
+<div class="container">
+<div class="contact">
+<div class="contact-grid">
+<div>
+<div class="eyebrow">
+       Get In Touch
+      </div>
+<h2>
+       Let's Connect
+      </h2>
+<p class="subtitle">
+       Professional networking, collaboration অথবা পরিচিত হওয়ার জন্য যোগাযোগ করতে পারেন।
+      </p>
+</div>
+<div>
+<div class="contact-links">
+<a href="mailto:your-email@example.com">
+        ✉ Email
+       </a>
+<a aria-label="Facebook link" href="#">
+        f Facebook
+       </a>
+<a aria-label="LinkedIn link" href="#">
+        in LinkedIn
+       </a>
+</div>
+<p style="color:#9eacbd;font-size:13px;margin-top:15px">
+       * Email ও social links আপনার আসল তথ্য দিয়ে replace করা যাবে।
+      </p>
+</div>
+</div>
+</div>
+</div>
+<footer>
+   © 2026 AB Rahman · Personal Portfolio · Built with a modern responsive design
+  </footer>
+<script>
+   (()=>{
+ const cards=[...document.querySelectorAll('.premium-photo')], box=document.getElementById('photoLightbox'), img=document.getElementById('lbImage'), title=document.getElementById('lbTitle'), counter=document.getElementById('lbCounter');
+ const closeBtn=document.getElementById('lbClose'), prev=document.getElementById('lbPrev'), next=document.getElementById('lbNext'); let current=0, visible=cards.slice();
+ function refreshVisible(){visible=cards.filter(c=>c.style.display!=='none');}
+ function show(i){refreshVisible(); if(!visible.length)return; current=(i+visible.length)%visible.length; const c=visible[current]; img.src=c.dataset.full; img.alt=c.querySelector('img').alt; title.textContent=c.dataset.caption; counter.textContent=`${current+1} / ${visible.length}`; box.classList.add('open');box.setAttribute('aria-hidden','false');document.body.classList.add('viewer-open');}
+ function close(){box.classList.remove('open');box.setAttribute('aria-hidden','true');document.body.classList.remove('viewer-open');img.removeAttribute('src');}
+ function step(n){show(current+n)}
+ cards.forEach(c=>c.addEventListener('click',()=>show(visible.indexOf(c)>=0?visible.indexOf(c):0)));
+ closeBtn.addEventListener('click',close); box.querySelector('.lb-backdrop').addEventListener('click',close); prev.addEventListener('click',()=>step(-1)); next.addEventListener('click',()=>step(1));
+ document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
+ let sx=0; box.addEventListener('touchstart',e=>sx=e.changedTouches[0].screenX,{passive:true}); box.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-sx;if(Math.abs(dx)>45)step(dx<0?1:-1)},{passive:true});
+ document.querySelectorAll('.premium-filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.premium-filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;cards.forEach(c=>c.style.display=(f==='all'||c.dataset.category===f)?'block':'none');refreshVisible();const empty=document.getElementById('galleryEmpty');if(empty)empty.style.display=visible.length?'none':'flex';}));
+ document.querySelectorAll('.premium-time').forEach(btn=>btn.addEventListener('click',()=>{const f=btn.dataset.jump;const target=document.querySelector(`.premium-filter[data-filter="${f}"]`);if(target)target.click();document.getElementById('premiumMasonry').scrollIntoView({behavior:'smooth',block:'start'});}));
+ refreshVisible();const empty=document.getElementById('galleryEmpty');if(empty)empty.style.display=visible.length?'none':'flex';
+})();
+  </script>
+</body>
+</html>
